@@ -16,9 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El Clima" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRG-dz-dS0">
+                                <rect key="frame" x="143" y="77" width="104.33333333333331" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlK-rs-geU">
+                                <rect key="frame" x="250" y="153" width="80" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2L-iQ-w9R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-qW-ldq">
+                                <rect key="frame" x="174" y="253" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Is5-r4-DfE">
+                                <rect key="frame" x="40" y="153" width="50" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="mQk-kK-LH8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-fG-ztL">
+                                <rect key="frame" x="165.66666666666666" y="213" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Is5-r4-DfE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="I9R-OD-edg"/>
+                            <constraint firstItem="MRG-dz-dS0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="JIz-PL-1M7"/>
+                            <constraint firstItem="Is5-r4-DfE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Kql-BX-OTG"/>
+                            <constraint firstItem="hox-qW-ldq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OyX-nR-O6H"/>
+                            <constraint firstItem="hox-qW-ldq" firstAttribute="top" secondItem="HIQ-fG-ztL" secondAttribute="bottom" constant="10" id="QGd-FY-Rp3"/>
+                            <constraint firstItem="JlK-rs-geU" firstAttribute="leading" secondItem="Is5-r4-DfE" secondAttribute="trailing" constant="160" id="U95-DL-tJg"/>
+                            <constraint firstItem="MRG-dz-dS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a39-LO-DFz"/>
+                            <constraint firstItem="hox-qW-ldq" firstAttribute="top" secondItem="MRG-dz-dS0" secondAttribute="bottom" constant="140" id="ct8-yM-5li"/>
+                            <constraint firstItem="HIQ-fG-ztL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzv-lD-m2m"/>
+                            <constraint firstItem="JlK-rs-geU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="l8N-px-Lsb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JlK-rs-geU" secondAttribute="trailing" constant="60" id="vZE-Fl-w94"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelWeather" destination="hox-qW-ldq" id="2r6-6i-coc"/>
+                        <outlet property="searchWeather" destination="JlK-rs-geU" id="8D9-SE-nCX"/>
+                        <outlet property="tempWeather" destination="HIQ-fG-ztL" id="g3w-jx-QWq"/>
+                        <outlet property="textWeather" destination="Is5-r4-DfE" id="QQg-Qh-ni1"/>
+                        <outlet property="titleWeather" destination="HIQ-fG-ztL" id="PB0-7s-fym"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
